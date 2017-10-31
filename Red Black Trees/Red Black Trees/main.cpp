@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void RBread(ifstream inputFile) {
+void RBread(int argc, char *argv[]) {
 	//N is the number of nodes in the initial red-black tree
 	int N;
 	//C is the number of additional nodes that need be inserted in the red black tree
@@ -21,6 +21,11 @@ void RBread(ifstream inputFile) {
 
 }
 
+struct treeNode {
+	int data;
+	enum {red, black} color;
+	treeNode *parent, *lchild, *rchild;
+};
 
 int main(int argc, char *argv[]) {
 	if (argc < 2) {
